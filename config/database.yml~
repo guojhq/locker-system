@@ -49,6 +49,8 @@ test:
 #
 production:
   <<: *default
-  database: locker-system_production
-  username: locker-system
-  password: <%= ENV['LOCKER-SYSTEM_DATABASE_PASSWORD'] %>
+  database: locker_system
+  username: keiko
+  password: <%= ENV['LOCKER_SYSTEM_DATABASE_PASSWORD'] %>
+  host: 127.0.0.1
+  port: 1433
