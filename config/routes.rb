@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'locker_system/index'
+
+  resources :articles
+
+  #get 'locker_system/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
