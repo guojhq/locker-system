@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :articles
-
   #get 'locker_system/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'locker_system#index'
+  root 'locker_system#hello'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
