@@ -49,6 +49,11 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     columnize (0.8.9)
+    countries (0.9.3)
+      currencies (~> 0.4.2)
+    country_select (2.1.0)
+      countries (~> 0.9, >= 0.9.3)
+    currencies (0.4.2)
     debugger-linecache (1.2.0)
     erubis (2.7.0)
     execjs (2.2.2)
@@ -176,6 +181,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.1)
   byebug
   coffee-rails (~> 4.0.0)
+  country_select
   guard-minitest
   jbuilder (~> 2.0)
   jquery-rails
