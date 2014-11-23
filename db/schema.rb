@@ -13,16 +13,4 @@
 
 ActiveRecord::Schema.define(version: 20141123175612) do
 
-  create_table "organizations", force: true do |t|
-    t.string   "name"
-    t.string   "streetAddress"
-    t.string   "city"
-    t.string   "country"
-    t.string   "postalCode"
-    t.string   "phone"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 end
