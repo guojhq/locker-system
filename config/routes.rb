@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :registrations
+
+  resources :students
+
   resources :organizations
 
   #get 'locker_system/index'
