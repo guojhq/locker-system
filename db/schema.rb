@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20141123185734) do
   end
 
   create_table "organizations", force: true do |t|
-    t.string   "name"
+    t.string   "name", null: false
     t.string   "streetAddress"
     t.string   "city"
     t.string   "postalCode"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20141123185734) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "products", ["name"], name: "index_organizations_on_name", unique: true; using: :btree
 
   create_table "registrations", force: true do |t|
     t.integer  "numberOfSemester"
