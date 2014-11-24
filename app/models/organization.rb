@@ -1,4 +1,6 @@
 class Organization < ActiveRecord::Base
+	#SEG2105 Keiko Climaco 5999930
+	#Setting up associations
 	has_many :students
 	has_many :lockers
 	validates :name, presence: true
@@ -7,4 +9,16 @@ class Organization < ActiveRecord::Base
 	validates :streetAddress, presence: true
 	validates :city, presence: true
 	validates :email, presence: true
+
+	#Setting up primary keys
+	self.primary_key = 'name'
+
+	#IDs
+	def id
+		raise NoMethodError, "Please call #{self.class.primary_key} instead."
+	end
+
+	def id=(value)
+		raise NoMethodError, "Please call #{self.class.primary_key}= instead."
+	end
 end
