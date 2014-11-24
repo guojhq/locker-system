@@ -9,7 +9,7 @@
 
 <ul>
   <li>
-<% for registration in @registrations
+<% for registration in @registrations %>
 <%= link_to registration.lockerNumber, registrations_path(registration) %>
 <%= link_to "Edit", edit_registration_path(registration) %>
 <%= link_to "Destroy", registrations_path(registration), :method => :delete %>
