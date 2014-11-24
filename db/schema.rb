@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141124134900) do
+ActiveRecord::Schema.define(version: 20141124135942) do
+
+  create_table "locker_associations", force: true do |t|
+    t.integer  "owner_id"
+    t.integer  "ownerLocker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "lockers", force: true do |t|
     t.integer  "lockerNumber"
@@ -35,17 +42,15 @@ ActiveRecord::Schema.define(version: 20141124134900) do
   end
 
   create_table "registrations", force: true do |t|
-    t.integer  "numberOfSemesters"
-    t.boolean  "termsAccepted"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "students", force: true do |t|
     t.integer  "studentNumber"
     t.string   "firstName"
     t.string   "lastName"
     t.string   "email"
+    t.integer  "lockerNumber"
+    t.string   "lockerType"
+    t.integer  "lockerCombo"
+    t.integer  "numberOfSemesters"
+    t.boolean  "termsAccepted"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
