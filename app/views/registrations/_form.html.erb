@@ -33,7 +33,8 @@
   </div>
   <div class="field">
     <%= f.label "Locker Type" %><br>
-    <%= f.text_field :lockerType %>
+    <%= f.association :lockerType, collection: Locker.active.all(order: 'Type'), prompt: "Choose locker type" as: :radio_buttons %>
+
   </div>
   <div class="field">
     <%= f.label "Locker Combo" %><br>
@@ -42,7 +43,6 @@
   <div class="field">
     <%= f.label "Number of Semesters" %><br>
     <%= f.number_field :numberOfSemesters %>
-    <%= f.collection_radio_buttons :options, [[Keyed,'Keyed Locker'], [Coded,'Coded Locker'], :lockerType] %>
   </div>
   <div class="field">
     <%= f.label "Terms Accepted" %><br>
