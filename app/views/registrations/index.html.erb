@@ -15,7 +15,7 @@
   </thead>
 
   <tbody>
-    <% for registration in @registrations %>
+    <% for registration.order("lockerNumber DESC") in @registrations %>
       <tr>
         <td><%= link_to registration.lockerNumber, registration_path(registration) %></td>
         <td><%= link_to "Edit", edit_registration_path(registration) %></td>
