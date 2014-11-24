@@ -3,13 +3,13 @@ class RegistrationsController < ApplicationController
 
   # GET /registrations
   # GET /registrations.json
-  def index
-    if params[:search]
-      @registrations = Registration.search(params[:search]).order("lockerNumber")
-    else
-      @registrations = Registration.all.order('lockerNumber')
-    end
+def index
+  if params[:search]
+    @users = Registration.search(params[:search]).order("created_at DESC")
+  else
+    @users = Registration.all.order('created_at DESC')
   end
+end
 
   # GET /registrations/1
   # GET /registrations/1.json

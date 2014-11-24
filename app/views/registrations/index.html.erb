@@ -1,10 +1,8 @@
 <h1>Registrations</h1>
 
-<%= form_tag (registrations_path, :method => "get", id: "search-form") do %>
-  <p>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Lockers" %>
-    <%= submit_tag "search", :name => nil %>
-  </p>
+<%= form_tag(registrations_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
+  <%= submit_tag "Search", :name => nil %>
 <% end %>
 
 <table>

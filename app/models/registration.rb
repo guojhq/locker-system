@@ -10,7 +10,7 @@ class Registration < ActiveRecord::Base
 	validates :numberOfSemesters, presence: true
 	validates :termsAccepted, presence: true
 
-	def self.search(search)
-		where("studentNumber like ?", "%#{search}")
-  	end
+	def self.search(query)
+	  where("lockerNumber like ?", "%#{query}%")
+	end
 end
