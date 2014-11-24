@@ -4,7 +4,11 @@ class CreateOrganizationRegistrations < ActiveRecord::Migration
       t.integer :registrar_id
       t.integer :registration_id
 
-      t.timestamps
+        t.timestamps null: false
     end
+    add_index :relationships, :follower_id
+    add_index :relationships, :followed_id
+    add_index :relationships, [:follower_id, :followed_id], unique: true
+
   end
 end
