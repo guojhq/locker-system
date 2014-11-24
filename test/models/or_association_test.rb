@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class OrganizationRegistrationTest < ActiveSupport::TestCase
+class OrAssociationTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
