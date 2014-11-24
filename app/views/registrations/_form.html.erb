@@ -33,8 +33,7 @@
   </div>
   <div class="field">
     <%= f.label "Locker Type" %><br>
-    <%= f.association :lockerType, collection: Locker.active.all(order: 'Type'), prompt: "Choose locker type" as: :radio_buttons %>
-
+    <%= f.text_field :lockerType %>
   </div>
   <div class="field">
     <%= f.label "Locker Combo" %><br>
