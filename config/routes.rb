@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  resources :students
+
   resources :lockers
 
-
-  resources :registrations
 
   resources :organizations
 
