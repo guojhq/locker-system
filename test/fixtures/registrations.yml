@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numberOfSemesters: 1
+  termsAccepted: false
+
+two:
+  numberOfSemesters: 1
+  termsAccepted: false
