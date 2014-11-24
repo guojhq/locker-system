@@ -4,8 +4,6 @@ Rails.application.routes.draw do
 
   resources :registrations
 
-  resources :students
-
   resources :organizations
 
   # The priority is based upon order of creation: first created -> highest priority.
