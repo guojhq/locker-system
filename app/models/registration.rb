@@ -12,7 +12,7 @@ class Registration < ActiveRecord::Base
 
 	def self.search(search)
     	if search
-    		Registration.studentNumber(:all, :conditions => ['Registration.studentNumber LIKE ?', "%#{search}%"])
+    		find(:all, :conditions => ['studentNumber LIKE ?', "%#{search}%"])
     	else
       		Registration.all
     	end
