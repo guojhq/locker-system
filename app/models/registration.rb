@@ -10,11 +10,6 @@ class Registration < ActiveRecord::Base
 	validates :lockerCombo, presence: true
 	validates :numberOfSemesters, presence: true
 	validates :termsAccepted, presence: true, confirmation: true
-	
-	validate :check_locker_type
-	def check_locker_type
-		errors.add(:lockerType, "Must be keyed or Coded") if lockerType != "Keyed" or lockerType != "Coded"
-	end
 
 	def self.search(query)
 	  where("lockerNumber like ?", "%#{query}%")

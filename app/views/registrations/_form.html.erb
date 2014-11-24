@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label "Locker Number" %><br>
-    <%= f.number_field :lockerNumber %>
+    <%= f.text_field :lockerNumber %>
   </div>
   <div class="field">
     <%= f.label "Locker Type" %><br>
@@ -42,6 +42,7 @@
   <div class="field">
     <%= f.label "Number of Semesters" %><br>
     <%= f.number_field :numberOfSemesters %>
+    <%= f.collection_radio_buttons :options, [[Keyed,'Keyed Locker'], [Coded,'Coded Locker'], :lockerType]
   </div>
   <div class="field">
     <%= f.label "Terms Accepted" %><br>
