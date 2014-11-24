@@ -5,9 +5,9 @@ class RegistrationsController < ApplicationController
   # GET /registrations.json
 def index
   if params[:search]
-    @registrations = Registration.search(params[:search]).order("created_at DESC")
+    @registrations = Registration.search(params[:search])
   else
-    @registrations = Registration.all.order('created_at DESC')
+    @registrations = Registration.all
   end
 end
 
