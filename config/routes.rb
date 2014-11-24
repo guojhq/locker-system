@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :students
 
-  resources :organizations
+  resources :organizations, param: :name
   get 'organizations/new'
   get 'organizations/edit'
   get 'organizations/show'
