@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   resources :lockers
 
-
   resources :organizations
 
   # The priority is based upon order of creation: first created -> highest priority.
