@@ -2,8 +2,8 @@ class Locker < ActiveRecord::Base
 	# SEG2105 Keiko Climaco 5999930
 	belongs_to :organization
 	belongs_to :student
-	validates :lockerNumber, presence: true
-	validates :location, presence: true
-	validates :type, presence: true
-	validates :combo, presence: true
+	validates :lockerNumber, FILL_IN, presence: true
+	validates :location, FILL_IN, presence: true
+	validates :type, FILL_IN, presence: true
+	validates :combo, FILL_IN, presence: true
 end
