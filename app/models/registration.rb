@@ -10,11 +10,11 @@ class Registration < ActiveRecord::Base
 	validates :numberOfSemesters, presence: true
 	validates :termsAccepted, presence: true
 
-	  def self.search(search)
-    if search
-      find(:all, :conditions => ['Registration.studentNumber LIKE ?', "%#{search}"])
-    else
-      find(:all)
-    end
-  end
+	def self.search(search)
+    	if search
+    		Registration.studentNumber(:studentNumber => ["%#{search}"])
+    	else
+      		Registration.all
+    	end
+  	end
 end
