@@ -21,4 +21,8 @@ class Organization < ActiveRecord::Base
 	def id=(value)
 		raise NoMethodError, "Please call #{self.class.primary_key}= instead."
 	end
+
+	def to_param
+		name.parameterize
+	end
 end
