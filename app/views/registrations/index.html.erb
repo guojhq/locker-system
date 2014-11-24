@@ -1,6 +1,6 @@
 <h1>Registrations</h1>
 
-<% form_tag registrations_path, :method => 'get' do %>
+<%= form_tag registrations_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search %>
     <%= submit_tag "search", :name => nil %>
