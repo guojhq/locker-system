@@ -4,7 +4,7 @@ class RegistrationsController < ApplicationController
   # GET /registrations
   # GET /registrations.json
   def index
-    @registrations = Registration.all
+    @registrations = Registration.search(params[:search])
   end
 
   # GET /registrations/1

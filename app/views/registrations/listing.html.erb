@@ -1,20 +1,4 @@
-<h1>Registrations</h1>
-
-<% form_tag registrations_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search %>
-    <%= submit_tag "search", :name => nil %>
-  </p>
-<% end %>
-
-<ul>
-  <li>
-<% for registration in @registrations
-<%= link_to registration.lockerNumber, registrations_path(registration) %>
-<%= link_to "Edit", edit_registration_path(registration) %>
-<%= link_to "Destroy", registrations_path(registration), :method => :delete %>
-  </li> 
-</ul>
+<h1>Listing registrations</h1>
 
 <table>
   <thead>
