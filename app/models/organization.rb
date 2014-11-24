@@ -3,6 +3,7 @@ class Organization < ActiveRecord::Base
 	#Setting up associations
 	has_many :registrations
 	has_many :lockers
+	has_many :active_relationships, class_name: "ORAssociations", foreign_key: "registration_id", dependent: :destroy
 	validates :name, presence: true
 	validates :postalCode, length: { maximum: 6 }, presence: true
 	validates :phone, length: { maximum: 10 }, presence: true
