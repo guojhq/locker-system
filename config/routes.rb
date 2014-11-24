@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :lockers
+  resources :students
 
 
   resources :organizations
