@@ -7,15 +7,25 @@
   </p>
 <% end %>
 
-<ul>
-  <li>
-<% for registration in @registrations %>
-<%= link_to "Locker %#{registration.lockerNumber}", registration.lockerNumber, registrations_path(registration) %>
-<%= link_to "Edit", edit_registration_path(registration) %>
-<%= link_to "Destroy", registrations_path(registration), :method => :delete %>
-  </li> 
-  <% end %>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Locker Number</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @registrations.each do |registration| %>
+      <tr>
+        <td><%= link_to Registration.lockerNumber, registration.lockerNumber, registrations_path(registration) %></td>
+        <td><%= link_to "Edit", edit_registration_path(registration) %></td>
+        <td><%= link_to "Destroy", registrations_path(registration), :method => :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <br>
 
