@@ -4,6 +4,7 @@ one:
   name: MyString
   streetAddress: MyString
   city: MyString
+  country: MyString
   postalCode: MyString
   phone: MyString
   email: MyString
@@ -12,6 +13,7 @@ two:
   name: MyString
   streetAddress: MyString
   city: MyString
+  country: MyString
   postalCode: MyString
   phone: MyString
   email: MyString

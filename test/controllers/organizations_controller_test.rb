@@ -18,7 +18,7 @@ class OrganizationsControllerTest < ActionController::TestCase
 
   test "should create organization" do
     assert_difference('Organization.count') do
-      post :create, organization: { city: @organization.city, email: @organization.email, name: @organization.name, phone: @organization.phone, postalCode: @organization.postalCode, streetAddress: @organization.streetAddress }
+      post :create, organization: { city: @organization.city, country: @organization.country, email: @organization.email, name: @organization.name, phone: @organization.phone, postalCode: @organization.postalCode, streetAddress: @organization.streetAddress }
     end
 
     assert_redirected_to organization_path(assigns(:organization))
@@ -35,7 +35,7 @@ class OrganizationsControllerTest < ActionController::TestCase
   end
 
   test "should update organization" do
-    patch :update, id: @organization, organization: { city: @organization.city, email: @organization.email, name: @organization.name, phone: @organization.phone, postalCode: @organization.postalCode, streetAddress: @organization.streetAddress }
+    patch :update, id: @organization, organization: { city: @organization.city, country: @organization.country, email: @organization.email, name: @organization.name, phone: @organization.phone, postalCode: @organization.postalCode, streetAddress: @organization.streetAddress }
     assert_redirected_to organization_path(assigns(:organization))
   end
 
