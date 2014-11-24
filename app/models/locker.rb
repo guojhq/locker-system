@@ -6,9 +6,7 @@ class Locker < ActiveRecord::Base
 	validates :location, presence: true
 	validates :type, presence: true
 	validates :combo, presence: true
-
-	set_inheritance_column :type
-
+	
 	class KeyedLocker < Locker 
 
 	end
