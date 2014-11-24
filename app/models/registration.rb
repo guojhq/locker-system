@@ -4,6 +4,7 @@ class Registration < ActiveRecord::Base
 	validates :studentNumber, presence: true, length: {maximum: 7}
 	validates :firstName, presence: true
 	validates :lastName, presence: true
+	validates :email, presence: true
 	validates :lockerNumber, presence: true
 	validates :lockerType, presence: true
 	validates :lockerCombo, presence: true
