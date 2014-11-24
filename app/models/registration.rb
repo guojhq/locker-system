@@ -11,10 +11,6 @@ class Registration < ActiveRecord::Base
 	validates :termsAccepted, presence: true
 
 	def self.search(search)
-    	if search
-    		find(:all, :conditions => ['studentNumber LIKE ?', "%#{search}%"])
-    	else
-      		Registration.all
-    	end
+		where("studentNumber like ?", "%#{search}")
   	end
 end

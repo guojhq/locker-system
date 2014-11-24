@@ -4,7 +4,10 @@ class RegistrationsController < ApplicationController
   # GET /registrations
   # GET /registrations.json
   def index
-    @registrations = Registration.search(params[:search])
+    if params[:search]
+      @registrations = Registration.search(params[:search]).order("lockerNumber")
+    else
+      @registrations = Registration.all.order('lockerNumber')
   end
 
   # GET /registrations/1
