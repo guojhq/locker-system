@@ -19,7 +19,7 @@
   <tbody>
     <% @registrations.each do |registration| %>
       <tr>
-        <td><%= link_to Registration.lockerNumber, registrations_path(registration) %></td>
+        <td><%= link_to Registration.lockerNumber, registration_path(registration) %></td>
         <td><%= link_to "Edit", edit_registration_path(registration) %></td>
         <td><%= link_to "Destroy", registrations_path(registration), :method => :delete %></td>
       </tr>
