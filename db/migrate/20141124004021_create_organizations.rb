@@ -1,6 +1,6 @@
 class CreateOrganizations < ActiveRecord::Migration
   def change
-    create_table :organizations id: false do |t|
+    create_table :organizations, {:id => false} do |t|
       t.string :name, null:false
       t.string :streetAddress
       t.string :city
@@ -10,6 +10,6 @@ class CreateOrganizations < ActiveRecord::Migration
       t.string :email
       t.timestamps
     end
-    add_index :organizations, :name, unique: true
+    execute "ALTER TABLE organizations ADD PRIMARY KEY (name);"
   end
 end

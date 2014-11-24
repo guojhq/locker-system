@@ -13,8 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20141124021434) do
 
-  create_table "lockers", force: true do |t|
-    t.integer  "lockerNumber"
+  create_table "lockers", id: false, force: true do |t|
+    t.integer  "id",                       null: false
+    t.integer  "lockerNumber", default: 0, null: false
     t.string   "location"
     t.string   "type"
     t.integer  "combo"
@@ -22,8 +23,9 @@ ActiveRecord::Schema.define(version: 20141124021434) do
     t.datetime "updated_at"
   end
 
-  create_table "organizations", force: true do |t|
-    t.string   "name"
+  create_table "organizations", id: false, force: true do |t|
+    t.integer  "id",                         null: false
+    t.string   "name",          default: "", null: false
     t.string   "streetAddress"
     t.string   "city"
     t.string   "country"
@@ -41,8 +43,9 @@ ActiveRecord::Schema.define(version: 20141124021434) do
     t.datetime "updated_at"
   end
 
-  create_table "students", force: true do |t|
-    t.integer  "studentNumber"
+  create_table "students", id: false, force: true do |t|
+    t.integer  "id",                        null: false
+    t.integer  "studentNumber", default: 0, null: false
     t.string   "firstName"
     t.string   "lastName"
     t.string   "email"
