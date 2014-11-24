@@ -1,6 +1,7 @@
 class Organization < ActiveRecord::Base
 	has_many :students
 	has_many :lockers
+	validates :name, presence: true
 	validates :postalCode, length: { maximum: 6 }, presence: true
 	validates :phone, length: { maximum: 10 }, presence: true
 	validates :streetAddress, presence: true
