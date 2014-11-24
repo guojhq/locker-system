@@ -16,7 +16,7 @@ class Registration < ActiveRecord::Base
 	  where("lockerNumber like ?", "%#{query}%")
 	end
 
-	def check_locker_type
+	def self.check_locker_type
 		errors.add(:lockerType, "Must be keyed or Coded") if self.lockerType != "Keyed" or lockerType != "Coded"
 	end
 end
