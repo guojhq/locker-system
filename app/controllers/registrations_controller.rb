@@ -8,6 +8,7 @@ class RegistrationsController < ApplicationController
       @registrations = Registration.search(params[:search]).order("lockerNumber")
     else
       @registrations = Registration.all.order('lockerNumber')
+    end
   end
 
   # GET /registrations/1
