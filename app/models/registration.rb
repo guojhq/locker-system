@@ -21,7 +21,7 @@ class Registration < ActiveRecord::Base
 	end
 
 	#Keiko Climaco 5999930, sorting by locker number method!
-def sorted_by_locker_number
+def self.sorted_by_locker_number
   Registration.all.sort_by(&:lockerNumber)
 end
 
