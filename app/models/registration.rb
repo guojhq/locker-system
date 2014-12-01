@@ -20,6 +20,11 @@ class Registration < ActiveRecord::Base
 	  where("lockerNumber like ?", "%#{query}%")
 	end
 
+	#Keiko Climaco 5999930, sorting by locker number method!
+def sorted_by_locker_number
+  Registration.all.sort_by(&:lockerNumber)
+end
+
 	# Keiko Climaco 5999930, validation for number of semesters
 	def valid_number?
 		numberOfSemesters == 1 || numberOfSemesters == 2
