@@ -7,4 +7,11 @@ class RegisterTest < ActiveSupport::TestCase
     #reg :studentNumber => 6775091, :firstName => 'Nick'
     assert !reg.save
   end
+  
+  test “should create registration” do
+  assert_difference(‘Registration.count’) do
+    post :create, :registration => { }
+  end
+  assert_redirected_to registration_path(assigns(:registration))
+end
 end
