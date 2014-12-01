@@ -8,14 +8,11 @@ def index
   if params[:search]
     @registrations = Registration.search(params[:search])
   else
+    #Keiko Climaco 5999930, implementing database sort by locker number!
     @registrations = Registration.sorted_by_locker_number
   end
 end
 
-#Keiko Climaco 5999930, sorting by locker number method!
-def sorted_by_locker_number
-  Registration.all.sort_by(&:lockerNumber)
-end
   # GET /registrations/1
   # GET /registrations/1.json
   def show

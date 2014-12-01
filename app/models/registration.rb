@@ -8,7 +8,7 @@ class Registration < ActiveRecord::Base
 	validates :studentNumber, presence: true, :length => {:is => 7}, :numericality => {:only_integer => true}
 	validates :firstName, presence: true
 	validates :lastName, presence: true
-	validates :email, presence: true
+	validates :email, presence: true, :format => {:with => /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/}
 	validates :lockerNumber, presence: true, :numericality => {:only_integer => true}, :uniqueness => true
 	validates :lockerType, presence: true, inclusion: {in: %w(keyed coded), message: "%{value} is not a valid locker type"} 
 	validates :lockerCombo, presence: true, :length => {:is => 4}, :numericality => {:only_integer => true}
