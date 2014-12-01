@@ -13,7 +13,7 @@ def index
 end
 
 #Keiko Climaco 5999930, sorting by locker number method!
-def self.sorted_by_locker_number
+def sorted_by_locker_number
   Registration.all.sort_by(&:lockerNumber)
 end
   # GET /registrations/1
