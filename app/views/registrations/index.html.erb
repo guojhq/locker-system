@@ -18,7 +18,7 @@
   <tbody>
     <% for registration in @registrations%>
       <tr>
-        <td><%= link_to_sorted registration.lockerNumber, registration_path(registration)%></td>
+        <td><%= link_to registration.lockerNumber, registration_path(registration)%></td>
         <td><%= link_to "Edit", edit_registration_path(registration) %></td>
         <td><%= link_to 'Destroy', registration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
