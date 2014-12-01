@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Locker System</title>
-	<%= stylesheet_link_tag 'application', media: 'all',
-	'data-turbolinks-track' => true %>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	<%= csrf_meta_tags %>
-	<!--[if lt IE 9]>
-		<script src="//cdnjs.cloudfare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
-	<![endif]-->
+  <title>LockerSystem</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
 
-
-	<div class="hero-unit">
-	<h1>Locker Registration System</h1>
-	<p><a class="btn btn-primary btn-large" href="registrations">Register</a></p>
-	</div><!-- .hero-unit -->
-
-	<div class "row">
-		
-	</div>
-
-
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+       
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#", class="navbar-brand">ESSAEG</a>
+        </div>
+       
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <!--<li><%= link_to "Home"%></li>-->
+                <li><%= link_to "Register", registrations_path%></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <%= yield %>
+</div>
 </body>
 </html>
