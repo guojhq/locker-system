@@ -14,8 +14,9 @@
     </tr>
   </thead>
 
+<!-- Keiko Climaco 5999930 Displaying occupied lockers -->
   <tbody>
-    <% for registration in @registrations %>
+    <% for registration in @registrations :order => lockerNumber %>
       <tr>
         <td><%= link_to registration.lockerNumber, registration_path(registration) %></td>
         <td><%= link_to "Edit", edit_registration_path(registration) %></td>

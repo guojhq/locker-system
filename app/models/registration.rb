@@ -1,7 +1,8 @@
 class Registration < ActiveRecord::Base
 
 	# Keiko Climaco 5999930, all these validations for user input
-	# checking for valid input length, input type, presence etc.
+	# checking for valid input length, input type, presence
+	# also checks if locker is only registered once
 	has_many :lockers
 	belongs_to :organization
 	validates :studentNumber, presence: true, :length => {:is => 7}, :numericality => {:only_integer => true}
