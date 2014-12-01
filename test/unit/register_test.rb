@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'test_helper.rb'
  
 class RegisterTest < ActiveSupport::TestCase
   
