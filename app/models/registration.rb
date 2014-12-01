@@ -1,6 +1,7 @@
 class Registration < ActiveRecord::Base
 
-	# Keiko Climaco 5999930, validation checks for user input
+	# Keiko Climaco 5999930, all these validations for user input
+	# checking for valid input length, input type, presence etc.
 	has_many :lockers
 	belongs_to :organization
 	validates :studentNumber, presence: true, :length => {:is => 7}, :numericality => {:only_integer => true}
@@ -18,6 +19,7 @@ class Registration < ActiveRecord::Base
 	  where("lockerNumber like ?", "%#{query}%")
 	end
 
+	# Keiko Climaco 5999930, validation for number of semesters
 	def valid_number?
 		numberOfSemesters == 1 || numberOfSemesters == 2
 	end
